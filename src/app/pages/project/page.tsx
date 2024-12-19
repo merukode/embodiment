@@ -38,14 +38,14 @@ function Page() {
             {/* upper section */}
             <motion.section className='grid grid-cols-1 sm:grid-cols-4 gap-4 mb-4' variants={containerVariants}>
                 <motion.div 
-                  className='w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] rounded-xl'
+                  className='w-full h-72 dark:border-[#00ff41] dark:shadow-[1px_0px_10px_-1px_rgba(0,255,27,0.75)]  dark:bg-[#171818] border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] rounded-xl'
                   variants={itemVariants}
                   whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
                 >
                     <MusicPlayer songs={songs} />
                 </motion.div>
                 <motion.div 
-                  className='col-span-1 sm:col-span-3 w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] rounded-xl flex justify-center items-center'
+                  className='col-span-1 sm:col-span-3 w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] dark:border-[#00ff41] dark:shadow-[1px_0px_10px_-1px_rgba(0,255,27,0.75)]  dark:bg-[#171818] rounded-xl flex justify-center items-center'
                   variants={itemVariants}
                   whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
                 >
@@ -63,7 +63,7 @@ function Page() {
             {/* middle section */}
             <motion.section className='grid grid-cols-1 sm:grid-cols-4 gap-4' variants={containerVariants}>
                 <motion.div 
-                  className='col-span-1 sm:col-span-3 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] rounded-xl w-full min-h-[216px] sm:min-h-[648px]'
+                  className='col-span-1 sm:col-span-3 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] dark:border-[#00ff41] dark:shadow-[1px_0px_10px_-1px_rgba(0,255,27,0.75)]  dark:bg-[#171818] rounded-xl w-full min-h-[216px] sm:min-h-[648px]'
                   variants={itemVariants}
                   whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
                 >
@@ -72,21 +72,21 @@ function Page() {
                 <motion.div className='col-span-1 sm:flex sm:flex-col gap-4 w-full overflow-x-auto sm:overflow-x-visible' variants={containerVariants}>
                     <motion.div className='flex flex-row sm:flex-col gap-4 w-full sm:w-auto' variants={containerVariants}>
                         <motion.div 
-                          className='flex-shrink-0 w-[calc(100vw-3rem)] sm:w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] rounded-xl'
+                          className='flex-shrink-0 w-[calc(100vw-3rem)] sm:w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] dark:border-[#00ff41] dark:shadow-[1px_0px_10px_-1px_rgba(0,255,27,0.75)]  dark:bg-[#171818] rounded-xl'
                           variants={itemVariants}
                           whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
                         >
                             {/* Content for the first small box */}
                         </motion.div>
                         <motion.div 
-                          className='flex-shrink-0 w-[calc(100vw-2rem)] sm:w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] rounded-xl'
+                          className='flex-shrink-0 w-[calc(100vw-2rem)] sm:w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] dark:border-[#00ff41] dark:shadow-[1px_0px_10px_-1px_rgba(0,255,27,0.75)]  dark:bg-[#171818] rounded-xl'
                           variants={itemVariants}
                           whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
                         >
                             {/* Content for the second small box */}
                         </motion.div>
                         <motion.div 
-                          className='flex-shrink-0 w-[calc(100vw-2rem)] sm:w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] rounded-xl'
+                          className='flex-shrink-0 w-[calc(100vw-2rem)] sm:w-full h-72 border-black border-2 hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#FF7F50] dark:border-[#00ff41] dark:shadow-[1px_0px_10px_-1px_rgba(0,255,27,0.75)]  dark:bg-[#171818] rounded-xl'
                           variants={itemVariants}
                           whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
                         >

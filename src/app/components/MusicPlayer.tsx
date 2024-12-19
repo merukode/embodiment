@@ -18,14 +18,14 @@ export function MusicPlayer({ songs }: MusicPlayerProps) {
                         backgroundImage: `url(${currentSong.thumbnail})`,
                     }}
                 >
-                    <h1 className='text-white font-extrabold italic bg-black bg-opacity-50'>"Tunes I’m totally vibing to 🎶"</h1>
+                    <h1 className='text-white dark:text-[#00ff41] font-extrabold italic bg-black bg-opacity-50'>"Tunes I’m totally vibing to 🎶"</h1>
                 </div>
 
                 <div className="flex justify-between items-center">
 
                     <div>
                         <h2 className="text-lg text-white font-semibold">{currentSong.title}</h2>
-                        <p className="text-sm text-[#A52A2A]">{currentSong.artist}</p>
+                        <p className="text-sm text-gray-100 ">{currentSong.artist}</p>
                     </div>
                     <button
                         className="h-12 text-black border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] transition-all duration-300 rounded-md"
@@ -44,7 +44,7 @@ export function MusicPlayer({ songs }: MusicPlayerProps) {
                     {songs.map((song, index) => (
                         <button
                             key={song.id}
-                            className={`w-full text-left text-[#8B4513] py-1 px-2 text-sm rounded ${currentSong.id === song.id ? 'bg-blue-100' : 'hover:bg-gray-100'
+                            className={`w-full text-left text-[#8B4513] dark:text-white py-1 px-2 text-sm rounded ${currentSong.id === song.id ? 'bg-slate-200 dark:bg-[#11ac5e]' : 'hover:bg-slate-50 dark:hover:bg-[#00ff7f]'
                                 }`}
                             onClick={() => changeSong(index)}
                         >

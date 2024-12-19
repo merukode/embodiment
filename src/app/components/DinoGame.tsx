@@ -1,5 +1,5 @@
 'use client'
-
+import { useTheme } from 'next-themes'
 import { useEffect, useRef, useState } from 'react'
 
 const JUMP_FORCE = -15
@@ -18,6 +18,7 @@ export default function DinoGame() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(false)
+  const {theme} = useTheme()
   const gameStateRef = useRef({
     dino: {
       x: 50,
@@ -113,7 +114,7 @@ export default function DinoGame() {
           return false
         }
 
-        ctx.fillStyle = '#000000'
+        ctx.fillStyle = theme === 'dark' ? '#00ff41' : '#000000';
         ctx.fillRect(
           obstacle.x,
           canvas.offsetHeight - GROUND_HEIGHT - obstacle.height,
@@ -124,7 +125,7 @@ export default function DinoGame() {
         return obstacle.x > -obstacle.width
       })
 
-      ctx.fillStyle = '#000000'
+      ctx.fillStyle = theme === 'dark' ? '#00ff41' : '#000000';
       ctx.fillRect(0, canvas.offsetHeight - GROUND_HEIGHT, canvas.offsetWidth, GROUND_HEIGHT)
 
       ctx.save()
@@ -134,7 +135,7 @@ export default function DinoGame() {
       )
       ctx.rotate(state.dino.rotation)
       
-      ctx.fillStyle = '#000000'
+      ctx.fillStyle = theme === 'dark' ? '#00ff41' : '#000000';
       ctx.fillRect(
         -DINO_WIDTH / 2,
         -DINO_HEIGHT / 2,
@@ -234,7 +235,7 @@ export default function DinoGame() {
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <button 
             onClick={startGame}
-            className="w-24 h-24 rounded-full bg-black hover:bg-black/90 transition-transform hover:scale-110 flex items-center justify-center"
+            className="w-24 h-24 rounded-full bg-black dark:bg-[#00ff41] hover:bg-black/90 transition-transform hover:scale-110 flex items-center justify-center"
             aria-label={gameOver ? "Restart Game" : "Start Game"}
           >
             <svg 
@@ -247,18 +248,18 @@ export default function DinoGame() {
           </button>
           {gameOver ? (
             <div className="text-center mt-4">
-              <p className="text-black text-xl font-bold mb-2">Game Over!</p>
-              <p className="text-black">Score: {score}</p>
+              <p className="text-black dark:text-white text-xl font-bold mb-2">Game Over!</p>
+              <p className="text-black dark:text-white">Score: {score}</p>
             </div>
           ) : (
-            <p className="text-black text-xl font-bold mt-4">Press Space or Tap to Start</p>
+            <p className="text-black dark:text-white text-xl font-bold mt-4">Press Space or Tap to Start</p>
           )}
         </div>
       )}
       
       {isPlaying && (
         <div className="absolute top-4 left-4">
-          <p className="text-black font-bold">Score: {score}</p>
+          <p className="text-black dark:text-white font-bold">Score: {score}</p>
         </div>
       )}
     </div>
