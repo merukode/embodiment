@@ -227,7 +227,7 @@ export default function DinoGame() {
     <div className="relative w-full h-full flex flex-col items-center justify-center">
       <canvas
         ref={canvasRef}
-        className="w-full h-full bg-[#FF7F50] rounded-lg touch-none"
+        className="w-full h-full dark:bg-gray-800 dark:hover:shadow-[8px_8px_0px_rgba(255,255,255,0.2)] bg-[#FF7F50] rounded-lg touch-none"
       />
       
       {(!isPlaying || gameOver) && (
